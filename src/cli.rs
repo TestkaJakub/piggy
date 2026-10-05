@@ -21,4 +21,10 @@ pub enum Command {
     Delete { name: String },
     /// Show all piggy banks (default)
     List,
+    /// Put money into a piggy bank
+    Add { name: String, amount: String },
+    /// Take money out of a piggy bank
+    Take { name: String, amount: String },
+    /// Set or change the goal (omit AMOUNT to remove it)
+    Goal { name: String, amount: Option<String> },
 }
